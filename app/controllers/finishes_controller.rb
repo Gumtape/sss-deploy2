@@ -9,7 +9,7 @@ class FinishesController < ApplicationController
     # GET /finishes/:user_id/:cource_id/spot_id
     def show
       @finish = Finish.where "user_id == ? and course_id == ? and spot_id == ?",params[:user_id],params[:course_id],params[:spot_id]
-      if @finish != []
+      if @finish != nil
         render :json => {'result' => 'true'}
       else
         render :json => {'result' => 'false'}
