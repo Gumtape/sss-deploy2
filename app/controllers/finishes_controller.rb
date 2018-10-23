@@ -8,15 +8,14 @@ class FinishesController < ApplicationController
   
     # GET /finishes/:user_id/:cource_id/spot_id
     def show
-      @finish = Finish.where "user_id == ? and course_id == ? and spot_id == ?",params[:user_id],params[:course_id],params[:spot_id]
-     # if @finish != nil
-        #render :json => {'result' => 'true'}
-      #  render json: @finish
-      #else
-        #render :json => {'result' => 'false'}
-      #  render json: @finish
-      #end
-      render json: @finish
+      @finish = Finish.where "user_id == ? and course_id == ? and spot_id == ?",params[:user_id].to_i,params[:course_id].to_i,params[:spot_id].to_i
+      if @finish != []
+        render :json => {'result' => 'true'}
+        #render json: @finish
+      else
+        render :json => {'result' => 'false'}
+        #render json: @finish
+      end
     end
   
     # POST /cources
