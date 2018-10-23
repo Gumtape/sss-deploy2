@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  course_id: 1
+  name: MyString
+  GPS_X: 1.5
+  GPS_Y: 1.5
+  comment: MyText
+  image: MyString
+
+two:
+  course_id: 1
+  name: MyString
+  GPS_X: 1.5
+  GPS_Y: 1.5
+  comment: MyText
+  image: MyString

@@ -1,0 +1,1 @@
+json.array! @finishes, :user_id, :course_id, :spot_id

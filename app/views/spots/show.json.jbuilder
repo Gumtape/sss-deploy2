@@ -1,0 +1,1 @@
+json.array! @spot, :name, :GPS_X, :GPS_Y

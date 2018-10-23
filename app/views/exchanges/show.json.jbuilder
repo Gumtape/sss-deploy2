@@ -1,0 +1,1 @@
+json.array! @exchanges.user, :name

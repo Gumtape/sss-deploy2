@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cource_id: 1
+  name: MyString
+  location: MyText
+  description: MyText
+  image: MyString
+  data: 
+
+two:
+  cource_id: 1
+  name: MyString
+  location: MyText
+  description: MyText
+  image: MyString
+  data: 
