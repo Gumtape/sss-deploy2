@@ -21,10 +21,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'mini_magick', '~> 4.8'
 
 # images upload
-#gem 'carrierwave'
-#gem 'rmagick'
+gem 'carrierwave'
+gem 'rmagick'
 
-gem "refile", require: "refile/rails", github: 'manfe/refile'
+gem "refile", require: "refile/rails"
 gem "refile-mini_magick"
 
 # Use Capistrano for deployment
