@@ -14,7 +14,7 @@ class FinishesController < ApplicationController
       course.to_i
       spot = params[:spot_id]
       spot.to_i
-      @finish = Finish.where "user_id == ? and course_id == ? and spot_id == ?",user,course,spot
+      @finish = Finish.where "user_id = ? and course_id = ? and spot_id = ?",user,course,spot
       if @finish != []
         render :json => {'result' => 'true'}
         #render json: @finish
