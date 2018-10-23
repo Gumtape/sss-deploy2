@@ -13971,3 +13971,65 @@ Migrating to AddCourseIdToPrize (20181023135750)
   ↳ bin/rails:4
   [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:4
+Started GET "/finishes/1/1/1" for 127.0.0.1 at 2018-10-23 23:42:44 +0900
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FinishesController#show as */*
+  Parameters: {"user_id"=>"1", "course_id"=>"1", "spot_id"=>"1", "finish"=>{}}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/finishes/1/1/1" for 127.0.0.1 at 2018-10-23 23:42:50 +0900
+Processing by FinishesController#show as */*
+  Parameters: {"user_id"=>"1", "course_id"=>"1", "spot_id"=>"1", "finish"=>{}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/finishes/1/1/2" for 127.0.0.1 at 2018-10-23 23:42:51 +0900
+Processing by FinishesController#show as */*
+  Parameters: {"user_id"=>"1", "course_id"=>"1", "spot_id"=>"2", "finish"=>{}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/finishes/1/1/3" for 127.0.0.1 at 2018-10-23 23:42:53 +0900
+Processing by FinishesController#show as */*
+  Parameters: {"user_id"=>"1", "course_id"=>"1", "spot_id"=>"3", "finish"=>{}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/finishes/" for 127.0.0.1 at 2018-10-23 23:42:56 +0900
+Processing by FinishesController#index as */*
+  Parameters: {"finish"=>{}}
+  Rendering finishes/index.json.jbuilder
+  [1m[36mFinish Load (0.6ms)[0m  [1m[34mSELECT "finishes".* FROM "finishes"[0m
+  ↳ app/views/finishes/index.json.jbuilder:1
+  Rendered finishes/index.json.jbuilder (25.9ms)
+Completed 200 OK in 57ms (Views: 54.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/finishes/" for 127.0.0.1 at 2018-10-23 23:43:46 +0900
+Processing by FinishesController#index as */*
+  Parameters: {"finish"=>{}}
+  Rendering finishes/index.json.jbuilder
+  [1m[36mFinish Load (0.9ms)[0m  [1m[34mSELECT "finishes".* FROM "finishes"[0m
+  ↳ app/views/finishes/index.json.jbuilder:1
+  Rendered finishes/index.json.jbuilder (7.6ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/finishes/1/1/1" for 127.0.0.1 at 2018-10-23 23:43:48 +0900
+Processing by FinishesController#show as */*
+  Parameters: {"user_id"=>"1", "course_id"=>"1", "spot_id"=>"1", "finish"=>{}}
+  [1m[36mFinish Load (0.0ms)[0m  [1m[34mSELECT "finishes".* FROM "finishes" WHERE (user_id == '1' and course_id == '1' and spot_id == '1')[0m
+  ↳ app/controllers/finishes_controller.rb:12
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/finishes/1/1/2" for 127.0.0.1 at 2018-10-23 23:43:51 +0900
+Processing by FinishesController#show as */*
+  Parameters: {"user_id"=>"1", "course_id"=>"1", "spot_id"=>"2", "finish"=>{}}
+  [1m[36mFinish Load (0.0ms)[0m  [1m[34mSELECT "finishes".* FROM "finishes" WHERE (user_id == '1' and course_id == '1' and spot_id == '2')[0m
+  ↳ app/controllers/finishes_controller.rb:12
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
