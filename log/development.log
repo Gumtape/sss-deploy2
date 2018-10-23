@@ -14033,3 +14033,11 @@ Processing by FinishesController#show as */*
 Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/finishes/1/1/1" for 127.0.0.1 at 2018-10-23 23:54:25 +0900
+Processing by FinishesController#show as */*
+  Parameters: {"user_id"=>"1", "course_id"=>"1", "spot_id"=>"1", "finish"=>{}}
+  [1m[36mFinish Load (1.0ms)[0m  [1m[34mSELECT "finishes".* FROM "finishes" WHERE (user_id == '1' and course_id == '1' and spot_id == '1')[0m
+  ↳ app/controllers/finishes_controller.rb:12
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
