@@ -1,14 +1,20 @@
 class FinishesController < ApplicationController
-    # GET /cources
+    # GET /courses
     def index
       @finishes = Finish.all
 
       render 'index', formats: 'json', handlers: 'jbuilder'
     end
   
-    # GET /finishes/:user_id/:cource_id/spot_id
+    # GET /finishes/:user_id/:course_id/spot_id
     def show
-      @finish = Finish.where "user_id == ? and course_id == ? and spot_id == ?",params[:user_id].to_i,params[:course_id].to_i,params[:spot_id].to_i
+      user = params[:user_id]
+      user.to_i
+      course = params[:course_id]
+      course.to_i
+      spot = params[:spot_id]
+      spot.to_i
+      @finish = Finish.where "user_id == ? and course_id == ? and spot_id == ?",user,course,spot
       if @finish != []
         render :json => {'result' => 'true'}
         #render json: @finish
@@ -18,7 +24,7 @@ class FinishesController < ApplicationController
       end
     end
   
-    # POST /cources
+    # POST /courses
     def create
       @finish = Finish.new(finish_params)
   
