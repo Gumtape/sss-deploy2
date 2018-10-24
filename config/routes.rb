@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   #put '/spots/:id/upload', to:'spots#imageup'
 
   get '/courses', to:'courses#index'
+  get '/courses/count', to:'courses#num'
   get '/courses/count/:id', to:'courses#count'
   get '/courses/:id', to:'courses#show'
   get '/courses/:id/:text', to:'courses#search'
