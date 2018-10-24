@@ -16,12 +16,12 @@ class FinishesController < ApplicationController
       spot.to_i
       @finish = Finish.where "user_id = ? and course_id = ? and spot_id = ?",user,course,spot
       if @finish != []
-        @result = 'true'
+        @result = true
         render 'show', formats: 'json', handlers: 'jbuilder'
         #render :json => {'result' => 'true'}
         #render json: @finish
       else
-        @result = 'false'
+        @result = false
         render 'show', formats: 'json', handlers: 'jbuilder'
         #render :json => {'result' => 'false'}
         #render json: @finish
