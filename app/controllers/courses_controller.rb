@@ -29,9 +29,8 @@ class CoursesController < ApplicationController
   def num
     @course = Course.count
 
-    render json: @course
+    render 'num', formats: 'json', handlers: 'jbuilder'
   end
-
   # POST /courses
   def create
     @course = Course.new(course_params)

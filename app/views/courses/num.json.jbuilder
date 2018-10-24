@@ -1,0 +1,1 @@
+json.course_count @course
