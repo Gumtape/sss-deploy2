@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post '/spots', to:'spots#create'
 
   get '/courses', to:'courses#index'
+  get '/courses/count/idkensaku/:id', to:'courses#idsearch'
   get '/courses/count/:name', to:'courses#count'
   get '/courses/count', to:'courses#num'
   get '/courses/prize/:id', to:'courses#prizeinfo'
