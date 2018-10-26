@@ -26,7 +26,7 @@ class ExchangesController < ApplicationController
   end
 
   def delete
-    @exchange = Exchange.find_by(user_id: params[:user_id], course_id: params[:course_id])
+    @exchange = Exchange.find_by(QR: params[:QR])
     @exchange.update(exchange_params)
     @result = 'success!'
     render 'delete', formats: 'json', handlers: 'jbuilder'
