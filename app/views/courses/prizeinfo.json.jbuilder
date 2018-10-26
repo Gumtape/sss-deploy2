@@ -1,0 +1,1 @@
+json.array! @course, :id, :name, :location, :description
