@@ -23,7 +23,8 @@ Rails.application.routes.draw do
   get '/exchanges', to:'exchanges#index'
   get '/exchanges/:user_id/:course_id', to:'exchanges#show'
   post '/exchanges', to:'exchanges#create'
-
+  patch '/exchanges/:user_id/:course_id', to:'exchanges#delete'
+  
   get '/prizes', to:'prizes#index'
   post '/prizes', to:'prizes#create'
 
