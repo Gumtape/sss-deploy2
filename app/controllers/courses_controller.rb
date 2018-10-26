@@ -21,7 +21,7 @@ class CoursesController < ApplicationController
   end
 
   def count
-    @course = Course.where(id: params[:id])
+    @course = Course.where(name: params[:name])
     
     render 'count', formats: 'json', handlers: 'jbuilder'
   end
